@@ -1,3 +1,5 @@
+[Source YouTube-video](https://www.youtube.com/watch?v=fN25fMQZ2v0)
+
 ## 1. JWT Token:
 
    - HEADER  
@@ -43,7 +45,13 @@ Delete all thash after that.
   11. nodemailer
   12. nodemon (dev)
 
-## 6. Server develop proccess:
+## 6. Client NPM packeges:
+  1. mobx
+  2. mobx-react-lite
+  3. axios
+  4. @types/axios
+
+## 7. Server develop proccess:
   1. [.\index.js] express instance, express middleware, DB connect
   2. [.\models] User & Token DB models
   3. [.\router\index.js] Make routers
@@ -80,3 +88,17 @@ Demo authorized access to the list of users :
   25. [.\services\token-service.js] Make `validateAccessToken` functions of token service
   26. [.\middlewares\auth-middleware.js] Create express middleware for check user authorization
   27. [.\router\index.js] Add middleware for check user authorization to router
+
+## 8. Server develop proccess:
+  1. [.\src\App.tsx] React Functional Component (FC)
+  2. [.\src\http\index.ts] Handle client request by interceptors
+  3. [.\src\services\AuthService.ts] Service of authentification (login, registration, logout)
+  4. [.\src\models\response\AuthResponse.ts] Response authentification interface
+  5. [.\src\models\IUser.ts] User interface
+  6. [.\src\services\UserService.ts] Service for getting user list
+  7. [.\src\components\LoginForm.tsx] Login form component
+  8. [.\src\store\store.ts] Global store
+  9. [.\src\index.ts] Add global store (Context) to application
+  10. [.\src\components\LoginForm.tsx] Add Context
+  11. [.\src\App.tsx] Add Login form component. Add useEffect hook for execute `checkAuth()` once
+  12. [.\src\http\index.ts] Create interceptor for update access token by refresh token
